@@ -3,7 +3,7 @@
     "cancelButton": "Отмена",
     "updateButton": "Обновить",
     "enabledLabel": "Включено",
-    "disabledLabel": "Выключено",
+    "disabledLabel": "Отключено",
     "yesButton": "Да",
     "noButton": "Нет",
     "warning": "Внимание",
@@ -13,6 +13,7 @@
         "settingsTab": "Настройки"
     },
     "homeView": {
+        "refreshSuccess": "Успешно обновлено",
         "widgetTitle": "Главная",
         "updatesSubtitle": "Обновления",
         "patchedSubtitle": "Пропатченные приложения",
@@ -47,7 +48,8 @@
     "patcherView": {
         "widgetTitle": "Патчер",
         "patchButton": "Пропатчить",
-        "patchDialogText": "Вы выбрали патч ресурсов, и была обнаружена установка разделённого APK, поэтому могут возникнуть ошибки.\nВы уверены, что хотите продолжить?"
+        "patchDialogText": "Вы выбрали патч ресурсов, и была обнаружена установка разделённого APK, поэтому могут возникнуть ошибки.\nВы уверены, что хотите продолжить?",
+        "armv7WarningDialogText": "Патчинг пока не поддерживается на устройствах ARMv7. Всё равно продолжить?"
     },
     "appSelectorCard": {
         "widgetTitle": "Выберите приложение",
@@ -55,7 +57,7 @@
         "widgetSubtitle": "Не выбрано приложение",
         "noAppsLabel": "Приложения не найдены",
         "currentVersion": "Текущая",
-        "recommendedVersion": "Рекомендуемая",
+        "suggestedVersion": "Предложенная",
         "anyVersion": "любая"
     },
     "patchSelectorCard": {
@@ -71,20 +73,25 @@
     "appSelectorView": {
         "viewTitle": "Выберите приложение",
         "searchBarHint": "Искать приложения",
+        "selectFromStorageButton": "Выбрать из хранилища",
         "storageButton": "Хранилище",
-        "errorMessage": "Невозможно использовать выбранное приложение"
+        "errorMessage": "Невозможно использовать выбранное приложение",
+        "downloadToast": "Функция загрузки пока недоступна",
+        "featureNotAvailable": "Возможность пока не реализована",
+        "featureNotAvailableText": "Эта функция ещё не доступна для устройств без root. Выберите APK-файлы из хранилища."
     },
     "patchesSelectorView": {
         "viewTitle": "Выберите патчи",
         "searchBarHint": "Искать патчи",
         "doneButton": "Готово",
-        "recommended": "Рекомендуется",
-        "all": "Все",
+        "default": "По умолчанию",
+        "defaultTooltip": "Выбрать все патчи по умолчанию",
         "none": "Никакие",
+        "noneTooltip": "Снять выбор всех патчей",
         "loadPatchesSelection": "Загрузить выбор патчей",
         "noSavedPatches": "Нет сохранённых патчей для выбранного приложения.\nНажмите «Готово» для сохранения текущего выбора.",
         "noPatchesFound": "Для выбранного приложения не найдены патчи",
-        "selectAllPatchesWarningContent": "Вы собираетесь выбрать все патчи, в том числе и нерекомендуемые патчи, которые могут вызвать нежелательное поведение."
+        "selectAllPatchesWarningContent": "Вы собираетесь выбрать все патчи, в том числе и нерекомендуемые, которые могут вызвать нежелательное поведение."
     },
     "patchItem": {
         "unsupportedDialogText": "Выбор этого патча может привести к ошибкам во время патча.\n\nВерсия приложения: {packageVersion}\nПоддерживаемые версии:\n{supportedVersions}",
@@ -93,7 +100,7 @@
     "installerView": {
         "widgetTitle": "Установщик",
         "installButton": "Установить",
-        "installRootButton": "Установить как Root",
+        "installRootButton": "Установить от Root",
         "openButton": "Открыть",
         "shareButton": "Поделиться файлом",
         "notificationTitle": "ReVanced Manager патчит",
@@ -145,11 +152,10 @@
         "exportSectionTitle": "Импорт и экспорт",
         "aboutLabel": "Информация",
         "snackbarMessage": "Скопировано в буфер обмена",
-        "sentryLabel": "Логирование Sentry",
-        "sentryHint": "Отправлять анонимные логи для улучшения ReVanced Manager-а",
         "restartAppForChanges": "Перезапустите приложение для применения изменений",
         "deleteKeystoreLabel": "Удалить хранилище ключей",
         "deleteKeystoreHint": "Удалить хранилище ключей, использованных для подписи приложения",
+        "deleteKeystoreDialogText": "Вы уверены, что хотите удалить хранилище ключей, используемое для подписи пропатченных приложений?",
         "deletedKeystore": "Хранилище ключей удалено",
         "deleteTempDirLabel": "Удалить временные файлы",
         "deleteTempDirHint": "Удалить неиспользуемые временные файлы",
@@ -167,7 +173,17 @@
         "jsonSelectorErrorMessage": "Невозможно использовать выбранный JSON-файл",
         "deleteLogsLabel": "Удалить логи",
         "deleteLogsHint": "Удалить собранные Manager-ом логи",
-        "deletedLogs": "Логи удалены"
+        "deletedLogs": "Логи удалены",
+        "exportKeystoreLabel": "Экспорт хранилища ключей",
+        "exportKeystoreHint": "Экспортировать хранилище ключей, используемое для подписи приложений",
+        "exportedKeystore": "Хранилище экспортировано",
+        "noKeystoreExportFileFound": "Нет хранилища для экспорта",
+        "importKeystoreLabel": "Импорт хранилища ключей",
+        "importKeystoreHint": "Импортировать хранилище ключей, используемое для подписи приложений",
+        "importedKeystore": "Хранилище импортировано",
+        "keystoreSelectorErrorMessage": "Невозможно использовать выбранный файл хранилища",
+        "selectKeystorePassword": "Пароль хранилища ключей",
+        "selectKeystorePasswordHint": "Пароль хранилища ключей для подписи APK"
     },
     "appInfoView": {
         "widgetTitle": "О приложении",

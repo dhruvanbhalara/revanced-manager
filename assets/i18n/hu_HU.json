@@ -1,6 +1,7 @@
 {
-    "okButton": "Rendben",
+    "okButton": "OK",
     "cancelButton": "Mégse",
+    "updateButton": "Frissítés",
     "enabledLabel": "Engedélyezve",
     "disabledLabel": "Letiltva",
     "yesButton": "Igen",
@@ -12,6 +13,7 @@
         "settingsTab": "Beállítások"
     },
     "homeView": {
+        "refreshSuccess": "Sikeresen frissítve",
         "widgetTitle": "Irányítópult",
         "updatesSubtitle": "Frissítések",
         "patchedSubtitle": "Patchelt alkalmazások",
@@ -21,7 +23,7 @@
         "noInstallations": "Nincs telepítve patchelt alkalmazás",
         "installed": "Telepítve",
         "updateDialogTitle": "Frissítéskezelő",
-        "updateDialogText": "Biztosan le akarod tölteni és frissíteni a ReVanced Manager-t?",
+        "updateChangelogTitle": "Újdonságok",
         "notificationTitle": "Frissítés letöltve",
         "notificationText": "Érintse meg a frissítés telepítéséhez",
         "downloadingMessage": "Frissítés letöltése...",
@@ -46,7 +48,8 @@
     "patcherView": {
         "widgetTitle": "Patchelő",
         "patchButton": "Patch",
-        "patchDialogText": "Kiválasztottál egy TODO(resource) patchet, de a kiválasztott alkalmazás több komponensből áll, ez pedig hibákat okozhat patchelés közben.\nBiztos folytatni szeretnéd?"
+        "patchDialogText": "Kiválasztottál egy TODO(resource) patchet, de a kiválasztott alkalmazás több komponensből áll, ez pedig hibákat okozhat patchelés közben.\nBiztos folytatni szeretnéd?",
+        "armv7WarningDialogText": "Az ARMv7 eszközökön történő patchelés még nem támogatott. Mindenesetre folytassa?"
     },
     "appSelectorCard": {
         "widgetTitle": "Alkalmazás kiválasztása",
@@ -54,7 +57,7 @@
         "widgetSubtitle": "Nincs kiválasztott alkalmazás",
         "noAppsLabel": "Nem találhatóak alkalmazások",
         "currentVersion": "Jelenlegi",
-        "recommendedVersion": "Ajánlott",
+        "suggestedVersion": "Javasolt",
         "anyVersion": "bármely"
     },
     "patchSelectorCard": {
@@ -70,24 +73,29 @@
     "appSelectorView": {
         "viewTitle": "Válasszon egy alkalmazást",
         "searchBarHint": "Alkalmazások keresése",
+        "selectFromStorageButton": "Kiválasztás a tárhelyből",
         "storageButton": "Tárhely",
-        "errorMessage": "A kiválasztott alkalmazás nem használható"
+        "errorMessage": "A kiválasztott alkalmazás nem használható",
+        "downloadToast": "A letöltés funkció még nem érhető el",
+        "featureNotAvailable": "Nem megvalósított funkció",
+        "featureNotAvailableText": "Ez a funkció még nem lett hozzáadva a nem rootolt eszközök számára. Egyelőre az APK fájlokat a tárolóból kell kiválasztania."
     },
     "patchesSelectorView": {
         "viewTitle": "Patchek kiválasztása",
         "searchBarHint": "Patchek keresése",
         "doneButton": "Kész",
-        "recommended": "Ajánlott",
-        "all": "Összes",
+        "default": "Alapértelmezett",
+        "defaultTooltip": "Összes alapértelmezett patch kiválasztása",
         "none": "Semmi",
+        "noneTooltip": "Összes javítás kijelölésének törlése",
         "loadPatchesSelection": "Korábbi kiválasztás betöltése",
-        "noSavedPatches": "Ehhez az alkalmazáshoz nem tartozik egy mentett kiválasztás sem\nNyomd meg a Kész gombot hogy elmentsd a jelenlegi listát",
+        "noSavedPatches": "A kiválasztott alkalmazáshoz nincsenek mentett patchek.\nNyomd meg a 'Kész' gombot a jelenlegiek elmentéséhez.",
         "noPatchesFound": "A kiválasztott alkalmazáshoz nem találhatóak patchek",
-        "selectAllPatchesWarningContent": "Az összes patchet készülsz kiválasztani, ami nem ajánlott patcheket is tartalmaz, melyek váratlan hibákhoz vezethetnek."
+        "selectAllPatchesWarningContent": "Az összes patchet ki fogja választani, ami magában foglalja a nem javasolt patcheket is, és nem kívánt viselkedést okozhat."
     },
     "patchItem": {
         "unsupportedDialogText": "Ezt a patchet nem biztos hogy sikerül alkalmazni, mert más verzióhoz készült.\n\nAlkalmazás verzió: {packageVersion}\nJelenleg támogatott verziók:\n{supportedVersions}",
-        "unsupportedPatchVersion": "Nem támogatott verzió. Engedélyezd a kísérleti jellegű patchelést a beállításokban ha mégis alkalmaznád."
+        "unsupportedPatchVersion": "A patch nem támogatott ehhez az alkalmazás verzióhoz. Engedélyezd a kísérleti kapcsolót a beállításokban a folytatáshoz."
     },
     "installerView": {
         "widgetTitle": "Telepítő",
@@ -121,6 +129,7 @@
         "englishOption": "Angol (English)",
         "sourcesLabel": "Források",
         "sourcesLabelHint": "Állítsd be egyedi forrásaid",
+        "hostRepositoryLabel": "Adattároló API",
         "orgPatchesLabel": "Patchek - szervezet",
         "sourcesPatchesLabel": "Patchek - forrás",
         "orgIntegrationsLabel": "Integrációk - szervezet",
@@ -135,20 +144,21 @@
         "apiURLLabel": "API URL",
         "apiURLHint": "Itt állíthatod be az API címét",
         "selectApiURL": "API címe",
+        "experimentalUniversalPatchesLabel": "Kísérleti univerzális patchelés",
+        "experimentalUniversalPatchesHint": "Az összes univerzális patchekkel használható alkalmazás megjelenítése, az alkalmazások listájának betöltése lassabb lehet",
         "experimentalPatchesLabel": "Kísérleti patchelés",
         "experimentalPatchesHint": "A patcheket nem támogatott verziókra is lehessen alkalmazni",
         "enabledExperimentalPatches": "Kísérleti patchelés engedélyezve",
         "exportSectionTitle": "Importálás & exportálás",
         "aboutLabel": "Rólunk",
         "snackbarMessage": "Vágólapra másolva",
-        "sentryLabel": "Sentry naplózás",
-        "sentryHint": "Névtelen használati adatok küldésével hozzájárulhatsz, hogy a ReVanced Manager még jobb legyen",
         "restartAppForChanges": "Indítsd újra az alkalmazást a változások alkalmazásához",
         "deleteKeystoreLabel": "Kulcstartó törlése",
         "deleteKeystoreHint": "Törli az alkalmazás aláírásához használt kulcstartót",
+        "deleteKeystoreDialogText": "Biztos, hogy törölni szeretné a javított alkalmazások aláírásához használt kulcstárolót?",
         "deletedKeystore": "Kulcstartó törölve",
         "deleteTempDirLabel": "Ideiglenes fájlok törlése",
-        "deleteTempDirHint": "Felesleges átmeneti fájlok törlése",
+        "deleteTempDirHint": "Nem használt ideiglenes fájlok törlése",
         "deletedTempDir": "Ideiglenes fájlok törölve",
         "exportPatchesLabel": "Kiválasztások exportálása",
         "exportPatchesHint": "Az összes korábbi kiválasztás mentáse JSON fájlba",
@@ -163,7 +173,17 @@
         "jsonSelectorErrorMessage": "A kiválasztott JSON nem hasznalható",
         "deleteLogsLabel": "Naplók törlése",
         "deleteLogsHint": "A managerben összegyűjtott naplófájlok törlése",
-        "deletedLogs": "Naplók törölve"
+        "deletedLogs": "Naplók törölve",
+        "exportKeystoreLabel": "Kulcstár exportálása",
+        "exportKeystoreHint": "Alkalmazások aláírásához használt kulcstároló exportálása",
+        "exportedKeystore": "Kulcstároló exportálva",
+        "noKeystoreExportFileFound": "Nincs exportálható kulcstároló",
+        "importKeystoreLabel": "Kulcstár importálása",
+        "importKeystoreHint": "Alkalmazások aláírásához használt kulcstár importálása",
+        "importedKeystore": "Kulcstár importálva",
+        "keystoreSelectorErrorMessage": "A kiválasztott KULCSTÁR fájl használata nem lehetséges",
+        "selectKeystorePassword": "Kulcstár Jelszó",
+        "selectKeystorePasswordHint": "Az apk aláírásához használt kulcstár jelszó kiválasztása"
     },
     "appInfoView": {
         "widgetTitle": "Alkalmazás információ",
